@@ -18,9 +18,9 @@
  * @author Andres Almiray
  */
 class GfxBuilderGriffonPlugin {
-    String version = '0.7'
+    String version = '0.8'
     // the version or versions of Griffon the plugin is designed for
-    String griffonVersion = '0.9.5 > *'
+    String griffonVersion = '1.1.0 > *'
     // the other plugins this plugin depends on
     Map dependsOn = [:]
     // resources that are included in plugin packaging
@@ -60,7 +60,7 @@ The following nodes become available to Swing views
 
 | *None* | *Property* | *Type*  | *Required* | *Bindable* |
 | ------ | ---------- | ------- | ---------- | ---------- |
-| canvas | node       | GdxNode | false      | false      |
+| canvas | node       | GfxNode | false      | false      |
 
 The following is an example of its usage (copy & paste it on SwingPad )
 
