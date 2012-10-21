@@ -4,13 +4,12 @@ griffon.project.dependency.resolution = {
     repositories {
         griffonHome()
         mavenCentral()
-        mavenLocal()
         mavenRepo 'http://repository.codehaus.org'
         mavenRepo 'http://repository.sonatype.org/content/groups/public'
         mavenRepo 'https://repository.jboss.org/nexus/content/groups/public-jboss'
     }
     dependencies {
-        String gfxBuilderVersion = '0.7'
+        String gfxBuilderVersion = '0.7.1'
         compile("org.codehaus.griffon:gfxbuilder-core:$gfxBuilderVersion",
                 "org.codehaus.griffon:gfxbuilder-svg:$gfxBuilderVersion",
                 "org.codehaus.griffon:gfxbuilder-swingx:$gfxBuilderVersion") {
