@@ -9,7 +9,7 @@ griffon.project.dependency.resolution = {
         mavenRepo 'https://repository.jboss.org/nexus/content/groups/public-jboss'
     }
     dependencies {
-        String gfxBuilderVersion = '0.7.1'
+        String gfxBuilderVersion = '0.8'
         compile("org.codehaus.griffon:gfxbuilder-core:$gfxBuilderVersion",
                 "org.codehaus.griffon:gfxbuilder-svg:$gfxBuilderVersion",
                 "org.codehaus.griffon:gfxbuilder-swingx:$gfxBuilderVersion") {

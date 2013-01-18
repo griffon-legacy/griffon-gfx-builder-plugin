@@ -1,5 +1,5 @@
 /*
- * Copyright 2009-2012 the original author or authors.
+ * Copyright 2009-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,11 @@
  * @author Andres Almiray
  */
 class GfxBuilderGriffonPlugin {
-    String version = '1.0.0'
+    String version = '1.1.0'
     // the version or versions of Griffon the plugin is designed for
-    String griffonVersion = '1.1.0 > *'
+    String griffonVersion = '1.2.0 > *'
     // the other plugins this plugin depends on
-    Map dependsOn = [swing: '1.1.0']
+    Map dependsOn = [swing: '1.2.0']
     // resources that are included in plugin packaging
     List pluginIncludes = []
     // the plugin license
@@ -51,7 +51,7 @@ class GfxBuilderGriffonPlugin {
 Brings the [GfxBuilder][1] on your Griffon application.
 
 Usage
-----
+-----
 Refer to the [builder's][1] page to known what nodes are available.
 
 ### Node
@@ -62,22 +62,24 @@ The following nodes become available to Swing views
 | ------ | ---------- | ------- | ---------- | ---------- |
 | canvas | node       | GfxNode | false      | false      |
 
-The following is an example of its usage (copy & paste it on SwingPad )
+The following is an example of its usage (copy & paste it on SwingPad)
 
-        canvas(size: [200,200]) {
-            group(borderColor: 'none') {
-                antialias true
-                background(color: color('white'))
-                rect(x: 50, y: 50, w: 100, h: 100, fill: color('red'))
-                rect(x: 100, y: 100, w: 100, h: 100, fill: color('green'))
-                path {
-                    moveTo(x: 100, y: 100)
-                    lineTo(x: 150, y: 150)
-                    lineTo(x: 50, y: 200)
-                    close()
-                }
+    canvas(preferredSize: [200,200]) {
+        group(borderColor: 'none') {
+            antialias true
+            background(color: color('white'))
+            rect(x: 50, y: 50, w: 100, h: 100, fill: color('red'))
+            rect(x: 100, y: 100, w: 100, h: 100, fill: color('green'))
+            path {
+                moveTo(x: 100, y: 100)
+                lineTo(x: 150, y: 150)
+                lineTo(x: 50, y: 200)
+                close()
             }
         }
+    }
+
+SwingPad can be found in the `samples` directory on your Griffon distribution.
 
 
 [1]: http://griffon.codehaus.org/GfxBuilder
